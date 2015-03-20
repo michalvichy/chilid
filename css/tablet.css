@@ -1,26 +1,26 @@
 @media screen and (min-width: 768px) and (max-width: 991px) {
   .rules .caption {
-    width: 95%;
     text-align: center;
+    width: 95%;
   }
 
   .icon {
-    top: -212%;
     left: 29%;
     position: absolute;
+    top: -212%;
   }
 
   .main-text {
-    top: calc(5% + 85px);
     bottom: calc(13% + 84px);
     left: 3%;
     right: 3%;
+    top: calc(5% + 85px);
   }
 
   .main-text:first-child:before {
-    width: 253px;
-    top: -1px;
     background: white;
+    top: -1px;
+    width: 253px;
   }
 
   #namebox1 { border-bottom: none; }
@@ -30,44 +30,42 @@
   #namebox2, #namebox4 { right: 3% }
 
   /* Gallery wrapper */
-  .gallery-wrapper {
-    padding: 45px 1%;
-  }
+  .gallery-wrapper { padding: 45px 1%; }
 
   .photo {
+    height: 229px;
     margin: 0px 0px 25px 0px!important;
     width: 354px;
-    height: 229px;
-    overflow: visible
   }
 
   .photo:before { left: 12px; top: 20px; }
   .photo:after { right: 12px; bottom: 1px; }
 
   .photo img {
-    top: -20px;
-    width: 93%;
     clip: rect(40px auto 230px 0px );
     position: absolute;
+    top: -20px;
+    width: 93%;
   }
 
   .photo .cover {
-    background: -webkit-radial-gradient(25% 50%, circle, transparent 25%, #fff 10%);
     background: -moz-radial-gradient(25% 50%, circle, transparent 25%, #fff 10%);
+    background: -o-radial-gradient(25% 50%, circle, transparent 25%, #fff 10%);
+    background: -webkit-radial-gradient(25% 50%, circle, transparent 25%, #fff 10%);
     background: radial-gradient(25% 50%, circle, transparent 25%, #fff 10%);
   }
 
   .photo .cover .caption {
     bottom: 29%;
-    right: 0;
     left: 44%
+    right: 0;
   }
 
   /* Switcher */
   .switch-wrapper > div:first-child:before {
     border-left: 250px solid transparent;
-    border-top: 436px solid rgba(255,255,255,.6)!important;
     border-right: 0px solid transparent;
+    border-top: 436px solid rgba(255,255,255,.6)!important;
   }
 
   .switch-wrapper > div:last-child:before {
@@ -75,9 +73,15 @@
     border-top: 0px solid transparent;
   }
 
+  .switcher:last-child:after, .switcher:first-child:after { top: 8%; }
+
   /* Item list */
   .item-list ol li:before {
     font-size: 1.7em;
     top: 15%;
   }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1084px) {
+  .rules-wrapper .rules:nth-child(2) > .caption { font-size: 99%; }
 }

@@ -9,21 +9,24 @@ $(document).ready(function(){
     }
   });
 
-  //
-  $('#textbox1').css('visibility', 'visible');
 
+
+  //
   $('.namebox').click(function(){
     var target = $(this).data('box');
     var bgColor = $(this).css('background-color');
+
+    //check background color of clicked button
     var isWhite = bgColor === 'rgb(255, 255, 255)' || bgColor === 'rgb(243, 243, 243)';
 
     bgColor = isWhite ? '#428e9e' : bgColor;
 
-    $('.main-text').css('visibility', 'hidden');
-    $(target).css({'visibility':'visible', 'borderColor': bgColor});
+    $('.main-text').css('visibility', 'hidden'); //hide all .main-text
+    $(target).css({'visibility':'visible', 'borderColor': bgColor}); //show THE only one
     $(target).children('h4').css('color', bgColor);
   });
 
+  //Sticky top menu
   $(window).scroll(function(){
     var anchor = $('.menu-anchor').offset().top;
 
@@ -62,5 +65,15 @@ $(document).ready(function(){
         clip: 'rect(40px auto 230px 0px )'
       });
     }
+  });
+
+  //Smooth scrolling
+  $('.navbar a').click(function(){
+    var target = $(this).attr('href');
+
+    $('html, body').animate({
+      scrollTop: $(target).offset().top
+    }, 1000);
+    return false;
   });
 });
