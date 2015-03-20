@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  // menu on hover
+  //Menu elements on hover
   $('.navbar li').bind({
     mouseover: function(){
       $(this).children('.top-bar, .bottom-bar').css('visibility', 'visible');
@@ -11,7 +11,7 @@ $(document).ready(function(){
 
 
 
-  //
+  //Display proper box with text on click
   $('.namebox').click(function(){
     var target = $(this).data('box');
     var bgColor = $(this).css('background-color');
