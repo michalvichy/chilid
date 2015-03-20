@@ -68,7 +68,7 @@ $(document).ready(function(){
   });
 
   //Smooth scrolling
-  $('.navbar a').click(function(){
+  $('.navbar a[href*=#]:not([href=#])').click(function(){
     var target = $(this).attr('href');
 
     $('html, body').animate({

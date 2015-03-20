@@ -10,6 +10,7 @@
     top: -212%;
   }
 
+  /* Text content */
   .main-text {
     bottom: calc(13% + 84px);
     left: 3%;
